@@ -2,9 +2,9 @@ pipeline {
     agent any
     stages {
 		
-	stage('JaCoCo') {
+	stage('Build') {
             steps {
-                sh 'mvn jacoco:report'
+                sh 'mvn install -DskipTests'
             }
         }
 	
