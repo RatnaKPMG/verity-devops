@@ -2,12 +2,11 @@ pipeline {
     agent any
     stages {
 		
-		//Code starts for stage PMD
-		stage('PMD') {
+		//Code starts for stage Clean
+        stage('Clean') {
             steps {
-                sh 'mvn site'
+                sh 'mvn clean'
             }
         }
-		//Code ends for stage PMD
     }
 }
