@@ -2,7 +2,6 @@ pipeline {
     agent any
     stages {
 		
-		
 		//Code starts for stage PMD
 		stage('PMD') {
             steps {
