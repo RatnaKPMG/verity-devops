@@ -2,10 +2,17 @@ pipeline {
     agent any
     stages {
 		
-	stage('Compile') {
+	stage('Unit Test') {
             steps {
-                sh 'mvn compile'
+                sh 'mvn test'
+            }	
+            post {
+                always {
+                    junit 'target/surefire-reports/*.xml'
+                }
             }
         }
+	
+	
     }
 }
